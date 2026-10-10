@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   Design tokens — extracted from lgp-blacksmith.com (Elementor kit + page CSS)
+   Dark-only site.
+   ========================================================================== */
+
+:root {
+  --background: #191919; /* section bg rgb(25,25,25) */
+  --foreground: #ffffff;
+  --body-text: #333333; /* hello-elementor default body color */
+  --surface: #2d2d2d; /* partners card rgb(45,45,45) */
+  --button-bg: #292929; /* outline buttons rgb(41,41,41) */
+  --eyebrow: #b5b5b5; /* small Prata headings rgb(181,181,181) */
+  --nav-muted: #c5c5c5; /* nav links + inactive gallery tab rgb(197,197,197) */
+  --project-title: #989898; /* Heebo project titles rgb(152,152,152) */
+  --quote: #cccccc;
+  --thanks-text: #cbcbcb;
+  --partners-title: #cecece;
+  --divider: #686868; /* rgb(104,104,104) */
+  --footer-bg: #000000;
+  --footer-text: #8f8f8f; /* rgb(143,143,143) */
+  --footer-heading: #d1c8bb; /* rgb(209,200,187) */
+  --footer-accent: #ff6600;
+  --footer-rule: rgba(139, 139, 139, 0.31);
+  --input-bg: rgba(255, 255, 255, 0.73);
+  --input-border: #69727d;
+  --bronze: #715c41; /* hamburger bg / mobile menu hover */
+  --mobile-menu-bg: #f7f7f7;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-body-text: var(--body-text);
+  --color-surface: var(--surface);
+  --color-button-bg: var(--button-bg);
+  --color-eyebrow: var(--eyebrow);
+  --color-nav-muted: var(--nav-muted);
+  --color-project-title: var(--project-title);
+  --color-quote: var(--quote);
+  --color-thanks-text: var(--thanks-text);
+  --color-partners-title: var(--partners-title);
+  --color-divider: var(--divider);
+  --color-footer-bg: var(--footer-bg);
+  --color-footer-text: var(--footer-text);
+  --color-footer-heading: var(--footer-heading);
+  --color-footer-accent: var(--footer-accent);
+  --color-footer-rule: var(--footer-rule);
+  --color-input-bg: var(--input-bg);
+  --color-input-border: var(--input-border);
+  --color-bronze: var(--bronze);
+  --color-mobile-menu-bg: var(--mobile-menu-bg);
+
+  --font-prata: var(--font-prata), sans-serif;
+  --font-roboto: var(--font-roboto), sans-serif;
+  --font-heebo: var(--font-heebo), sans-serif;
+
+  /* Elementor breakpoints: tablet <=1024, mobile <=767 */
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1025px;
+}
+
+html {
+  background: var(--background);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-roboto), -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--body-text);
+  background: var(--background);
+}
+
+/* ==========================================================================
+   Elementor entrance animations (copied from elementor/assets/lib/animations)
+   .animated-slow => 2s. Triggered once when the element enters the viewport.
+   ========================================================================== */
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translate3d(-100%, 0, 0); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translate3d(100%, 0, 0); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translate3d(0, 100%, 0); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.reveal-pending { opacity: 0; }
+.reveal-fadeInLeft { animation: fadeInLeft 2s both; }
+.reveal-fadeInRight { animation: fadeInRight 2s both; }
+.reveal-fadeInUp { animation: fadeInUp 2s both; }
+.reveal-fadeIn { animation: fadeIn 2s both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-pending { opacity: 1; }
+  .reveal-fadeInLeft, .reveal-fadeInRight, .reveal-fadeInUp, .reveal-fadeIn { animation: none; }
+}
