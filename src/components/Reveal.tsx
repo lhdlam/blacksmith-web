@@ -21,14 +21,13 @@ export function Reveal({ animation, disableOnMobile, className, children }: Reve
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    if (disableOnMobile && window.matchMedia("(max-width: 767px)").matches) {
-      setState("static");
-      return;
-    }
+    /* Off-screen elements are invisible either way, so on mobile we simply
+       reveal without animating once the element is reached. */
+    const skip = disableOnMobile && window.matchMedia("(max-width: 767px)").matches;
     const io = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setState("visible");
+          setState(skip ? "static" : "visible");
           io.disconnect();
         }
       },
