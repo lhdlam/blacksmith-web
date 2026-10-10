@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { X } from "lucide-react";
+import Link from "next/link";
 
 import { NAV_ITEMS } from "@/data/site";
 import { cn } from "@/lib/utils";
@@ -29,7 +30,7 @@ export function SiteHeader() {
         <div className="mx-auto flex min-h-[90px] w-full max-w-[1140px] items-center">
           {/* Logo column */}
           <div className="w-1/2 p-2.5 md:w-[30%]">
-            <a href="/" className="block">
+            <Link href="/" className="block">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/logo.png"
@@ -38,7 +39,7 @@ export function SiteHeader() {
                 height={90}
                 className="h-auto w-[80%] max-w-full md:w-auto"
               />
-            </a>
+            </Link>
           </div>
 
           {/* Nav column */}
