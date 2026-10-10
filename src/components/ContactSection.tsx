@@ -27,7 +27,7 @@ export function ContactSection() {
           </h2>
         </div>
         <div className="w-full p-[10px] md:w-1/2">
-          <form onSubmit={handleSubmit} className="-mx-[5px] flex flex-wrap">
+          <form onSubmit={handleSubmit} className="-mx-[5px] -mb-[10px] flex flex-wrap">
             <div className="mb-[10px] w-full px-[5px]">
               <input type="text" name="name" placeholder="Tên" aria-label="Tên" className={`${inputClass} min-h-[40px] px-[16px] py-[8px]`} />
             </div>

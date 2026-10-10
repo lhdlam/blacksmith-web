@@ -26,13 +26,13 @@ export function SiteFooter() {
           </div>
           <div className="mt-[61px] w-full p-[10px] md:mt-0 md:w-1/3 md:pl-[40px]">
             <h2 className={headingClass}>Điện thoại</h2>
-            <p className={`${textClass} mb-[20px]`}>
+            <p className={`${textClass} mb-[34.4px]`}>
               +84 982 202 139 (Mrs. Dung – Giám đốc)
               <br />
               +84 937 899 678 (Mr. Tân – Quản lý sản xuất)
             </p>
             <h2 className={headingClass}>Email</h2>
-            <p className={textClass}>
+            <p className={`${textClass} mb-[14.4px]`}>
               Giám đốc: dungpham@lgp-blacksmith.com
               <br />
               Quản lý sản xuất: tanle@lgp-blacksmith.com

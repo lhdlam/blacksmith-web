@@ -19,14 +19,14 @@ export function ProductsSection() {
             <SeeAllLink href={PRODUCTS_URL} width={140} />
           </div>
         </div>
-        <p className="mt-[20px] mb-[19px] font-roboto text-[16px] leading-[24px] font-light text-white">
+        <p className="mt-[20px] mb-[38px] font-roboto text-[16px] leading-[24px] font-light text-white">
           Chúng tôi là nhà nhập khẩu và phân phối độc quyền của <strong className="font-normal">Grand Forge</strong> và{" "}
           <strong className="font-normal">Eurokorten</strong> tại Việt Nam.
           <br />
           Chúng tôi bán các sản phẩm của họ tại Việt Nam, cũng như tùy chỉnh chúng theo yêu cầu.
         </p>
         <JustifiedGallery tabs={GALLERY_TABS} images={GALLERY_IMAGES} />
-        <div className="mt-[39px] pb-[73px] text-end">
+        <div className="mt-[39px] pb-[68px] text-end">
           <SeeAllLink href={PRODUCTS_URL} width={105} />
         </div>
       </div>
